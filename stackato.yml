@@ -1,9 +1,0 @@
-name: releases
-ignores: ['env', '.git']
-framework:
-  type: python
-  runtime: python27
-processes:
-  web: python web.py
-cron:
-  - '*/5 * * * * ./scraper.py > static/releases-new.json && mv static/releases-new.json static/releases.json'
